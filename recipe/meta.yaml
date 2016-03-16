@@ -1,4 +1,4 @@
-{% set version = "0.10.13" %}
+{% set version = "0.11.7" %}
 
 package:
     name: ruamel.yaml
@@ -7,7 +7,7 @@ package:
 source:
     fn: ruamel.yaml.{{ version  }}.tar.gz
     url: https://pypi.python.org/packages/source/r/ruamel.yaml/ruamel.yaml-{{ version }}.tar.gz
-    md5: b75f26de99274d9bc107b02fc4552d31
+    md5: 55de477f1d1b5eb17731a7a822b712b6
 
 build:
     script: python setup.py install --single-version-externally-managed --record=record.txt
