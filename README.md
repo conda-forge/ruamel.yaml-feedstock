@@ -5,7 +5,7 @@ Home: https://bitbucket.org/ruamel/yaml
 
 Package license: MIT
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: A YAML package for Python. It is a derivative of Kirill Simonov's PyYAML 3.11 which supports YAML1.1
 
@@ -69,9 +69,15 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ruamel.yaml-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/ruamel.yaml-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/ruamel.yaml-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ruamel.yaml-feedstock) 
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ruamel.yaml-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ruamel.yaml-feedstock/branch/master)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ruamel-yaml-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ruamel-yaml-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ruamel.yaml/badges/version.svg)](https://anaconda.org/conda-forge/ruamel.yaml)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ruamel.yaml/badges/downloads.svg)](https://anaconda.org/conda-forge/ruamel.yaml)
 
 
 Updating ruamel.yaml-feedstock
