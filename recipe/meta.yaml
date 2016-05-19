@@ -10,7 +10,7 @@ source:
     md5: 88e58c8f50c3f471dc3a73e4d603e327
 
 build:
-    number: 0
+    number: 1
     script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     run:
         - python
         - setuptools
+        - ruamel.ordereddict   # [py26 or py27]
 
 test:
     imports:
