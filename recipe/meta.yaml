@@ -20,7 +20,8 @@ requirements:
   run:
     - python
     - setuptools
-    - ruamel.ordereddict   # [py26 or py27]
+    - typing  # [py<35]
+    - ruamel.ordereddict  # [py27]
 
 test:
   imports:
