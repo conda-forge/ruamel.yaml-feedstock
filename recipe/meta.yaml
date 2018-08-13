@@ -1,4 +1,4 @@
-{% set version = "0.15.53" %}
+{% set version = "0.15.54" %}
 
 package:
   name: ruamel.yaml
@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
