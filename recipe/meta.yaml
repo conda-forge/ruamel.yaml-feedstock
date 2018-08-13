@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/ruamel.yaml/ruamel.yaml-{{ version }}.tar.gz
-  sha256: 5f236ce7988dce54a206fdba4b5f02120e380c2c36f2cca88a2ff0df10b3b142
+  sha256: dbffddb365023fdf6269713f034d34f401a40c2a112575e18a99e24f82970bf2
 
 build:
   number: 0
