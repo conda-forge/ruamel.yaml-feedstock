@@ -29,6 +29,8 @@ requirements:
 test:
   imports:
     - ruamel.yaml
+  downstreams:
+    - conda-smithy
 
 about:
   home: https://bitbucket.org/ruamel/yaml
