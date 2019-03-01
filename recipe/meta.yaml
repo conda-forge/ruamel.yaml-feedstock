@@ -18,10 +18,12 @@ requirements:
   host:
     - python
     - pip
+    - ruamel
   run:
     - python
     - setuptools
     - typing  # [py<35]
+    - ruamel
     - ruamel.ordereddict  # [py27]
 
 test:
