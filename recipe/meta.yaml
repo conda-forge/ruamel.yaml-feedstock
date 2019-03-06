@@ -9,7 +9,7 @@ source:
   sha256: 86d034aa9e2ab3eacc5f75f5cd6a469a2af533b6d9e60ea92edbba540d21b9b7
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -18,10 +18,12 @@ requirements:
   host:
     - python
     - pip
+    - ruamel
   run:
     - python
     - setuptools
     - typing  # [py<35]
+    - ruamel
     - ruamel.ordereddict  # [py27]
 
 test:
