@@ -14,13 +14,6 @@ Current build status
 
 
 <table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://travis-ci.com/conda-forge/ruamel.yaml-feedstock">
-        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/ruamel.yaml-feedstock/master.svg?label=macOS">
-      </a>
-    </td>
-  </tr><tr>
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/ruamel.yaml-feedstock">
@@ -272,6 +265,7 @@ Installing `ruamel.yaml` from the `conda-forge` channel can be achieved by addin
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `ruamel.yaml` can be installed with:
