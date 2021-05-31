@@ -27,8 +27,7 @@ conda-build:
 CONDARC
 BUILD_CMD=build
 
-# https://github.com/conda/conda-build/issues/4219
-conda install --yes --quiet "conda-forge-ci-setup=3" 'conda-build<3.21' pip ${GET_BOA:-} -c conda-forge
+conda install --yes --quiet "conda-forge-ci-setup=3" conda-build pip ${GET_BOA:-} -c conda-forge
 
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
@@ -75,4 +74,5 @@ else
 fi
 
 ( startgroup "Final checks" ) 2> /dev/null
+
 touch "${FEEDSTOCK_ROOT}/build_artifacts/conda-forge-build-done-${CONFIG}"
