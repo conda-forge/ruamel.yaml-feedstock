@@ -75,4 +75,5 @@ else
 fi
 
 ( startgroup "Final checks" ) 2> /dev/null
+
 touch "${FEEDSTOCK_ROOT}/build_artifacts/conda-forge-build-done-${CONFIG}"
