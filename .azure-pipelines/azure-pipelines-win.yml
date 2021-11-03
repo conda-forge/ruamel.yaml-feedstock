@@ -58,8 +58,7 @@ jobs:
 
     - task: CondaEnvironment@1
       inputs:
-        # https://github.com/conda/conda-build/issues/4219
-        packageSpecs: 'python=3.9 "conda-build<3.21" conda "conda-forge-ci-setup=3" pip boa' # Optional
+        packageSpecs: 'python=3.9 conda-build conda "conda-forge-ci-setup=3" pip boa' # Optional
         installOptions: "-c conda-forge"
         updateConda: true
       displayName: Install conda-build and activate environment
