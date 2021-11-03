@@ -25,10 +25,11 @@ conda-build:
  root-dir: ${FEEDSTOCK_ROOT}/build_artifacts
 
 CONDARC
-BUILD_CMD=build
+GET_BOA=boa
+BUILD_CMD=mambabuild
 
 # https://github.com/conda/conda-build/issues/4219
-conda install --yes --quiet "conda-forge-ci-setup=3" 'conda-build<3.21' pip ${GET_BOA:-} -c conda-forge
+conda install --yes --quiet "conda-forge-ci-setup=3" "conda-build<3.21" pip ${GET_BOA:-} -c conda-forge
 
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
@@ -38,8 +39,8 @@ source run_conda_forge_build_setup
 # make the build number clobber
 make_build_number "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
 
-if [[ "${HOST_PLATFORM}" != "${BUILD_PLATFORM}" ]] && [[ "${BUILD_WITH_CONDA_DEBUG:-0}" != 1 ]]; then
-     EXTRA_CB_OPTIONS="${EXTRA_CB_OPTIONS:-} --no-test"
+if [[ "${HOST_PLATFORM}" != "${BUILD_PLATFORM}" ]] && [[ "${HOST_PLATFORM}" != linux-* ]] && [[ "${BUILD_WITH_CONDA_DEBUG:-0}" != 1 ]]; then
+    EXTRA_CB_OPTIONS="${EXTRA_CB_OPTIONS:-} --no-test"
 fi
 
 
@@ -67,7 +68,7 @@ else
 
     ( startgroup "Uploading packages" ) 2> /dev/null
 
-    if [[ "${UPLOAD_PACKAGES}" != "False" ]]; then
+    if [[ "${UPLOAD_PACKAGES}" != "False" ]] && [[ "${IS_PR_BUILD}" == "False" ]]; then
         upload_package --validate --feedstock-name="${FEEDSTOCK_NAME}"  "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
     fi
 
