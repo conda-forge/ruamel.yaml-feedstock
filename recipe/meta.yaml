@@ -1,4 +1,4 @@
-{% set version = "0.17.21" %}
+{% set version = "0.16.12" %}
 
 package:
   name: ruamel.yaml
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/ruamel.yaml/ruamel.yaml-{{ version }}.tar.gz
-  sha256: 8b7ce697a2f212752a35c1ac414471dc16c424c9573be4926b56ff3f5d23b7af
+  sha256: 076cc0bc34f1966d920a49f18b52b6ad559fbe656a0748e3535cf7b3f29ebf9e
 
 build:
   number: 1
@@ -31,7 +31,7 @@ test:
     - ruamel.yaml
 
 about:
-  home: https://bitbucket.org/ruamel/yaml
+  home: https://sourceforge.net/projects/ruamel-yaml/
   license: MIT
   license_file: LICENSE
   summary: A YAML package for Python. It is a derivative of Kirill Simonov's PyYAML 3.11 which supports YAML1.1
