@@ -9,7 +9,7 @@ source:
   sha256: 8b7ce697a2f212752a35c1ac414471dc16c424c9573be4926b56ff3f5d23b7af
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -31,7 +31,7 @@ test:
     - ruamel.yaml
 
 about:
-  home: https://bitbucket.org/ruamel/yaml
+  home: https://sourceforge.net/p/ruamel-yaml
   license: MIT
   license_file: LICENSE
   summary: A YAML package for Python. It is a derivative of Kirill Simonov's PyYAML 3.11 which supports YAML1.1
@@ -44,3 +44,4 @@ extra:
     - ocefpaf
     - mbargull
     - xhochy
+    - davidbrochart
