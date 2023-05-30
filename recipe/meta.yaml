@@ -1,4 +1,4 @@
-{% set version = "0.17.29" %}
+{% set version = "0.17.30" %}
 
 package:
   name: ruamel.yaml
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/ruamel.yaml/ruamel.yaml-{{ version }}.tar.gz
-  sha256: 695fc25595b0e03128e73093837aaed7e4cae4488ecd3173f8f6993da30d89d5
+  sha256: 7e47a3d9ccfa2e41d353e6615661308bcbbc2ebad393bdc13b725bac15baf8a9
 
 build:
   number: 0
