@@ -24,6 +24,7 @@ requirements:
     - python
     - pip
     - ruamel
+    - setuptools
   run:
     - python
     - ruamel.yaml.clib >=0.1.2
