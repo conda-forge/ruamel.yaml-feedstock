@@ -7,6 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/r/ruamel.yaml/ruamel.yaml-{{ version }}.tar.gz
   sha256: 9751de4cbb57d4bfbf8fc394e125ed4a2f170fbff3dc3d78abf50be85924f8be
+  patches:
+    - patches/0001-py314.patch
 
 build:
   number: 4
