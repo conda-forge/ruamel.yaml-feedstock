@@ -1,7 +1,8 @@
-diff -r df8c53ddf0d3 setup.py
+diff --git a/setup.py b/setup.py
+index a6632f1..6687196 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -75,9 +75,6 @@
+@@ -77,9 +77,6 @@ else:
              print('{:%Y-%d-%mT%H:%M:%S}'.format(datetime.datetime.now()), file=fp, end=' ')
              print(*args, **kw1)
  
@@ -11,7 +12,7 @@ diff -r df8c53ddf0d3 setup.py
  
  def literal_eval(node_or_string):
      """
-@@ -98,13 +95,15 @@
+@@ -100,13 +97,15 @@ def literal_eval(node_or_string):
          raise TypeError('only string or AST nodes supported')
  
      def _convert(node):
@@ -30,10 +31,10 @@ diff -r df8c53ddf0d3 setup.py
              return node.n
          elif isinstance(node, Tuple):
              return tuple(map(_convert, node.elts))
-@@ -114,7 +113,7 @@
+@@ -116,7 +115,7 @@ def literal_eval(node_or_string):
              return set(map(_convert, node.elts))
          elif isinstance(node, Dict):
-             return {_convert(k): _convert(v) for k, v in zip(node.keys, node.values)}
+             return dict((_convert(k), _convert(v)) for k, v in zip(node.keys, node.values))
 -        elif isinstance(node, NameConstant):
 +        elif sys.version_info < (3, 8) and isinstance(node, NameConstant):
              return node.value
