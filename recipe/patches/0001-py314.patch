@@ -38,5 +38,4 @@ diff -r df8c53ddf0d3 setup.py
 +        elif sys.version_info < (3, 8) and isinstance(node, NameConstant):
              return node.value
          elif sys.version_info < (3, 4) and isinstance(node, Name):
- 
              if node.id in _safe_names:
