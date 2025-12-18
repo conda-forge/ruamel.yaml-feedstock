@@ -3,11 +3,15 @@ About ruamel.yaml-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ruamel.yaml-feedstock/blob/main/LICENSE.txt)
 
-Home: https://sourceforge.net/p/ruamel-yaml
+Home: https://pypi.org/project/ruamel.yaml
 
 Package license: MIT
 
 Summary: A YAML package for Python. It is a derivative of Kirill Simonov's PyYAML 3.11 which supports YAML1.1
+
+Development: https://sourceforge.net/p/ruamel-yaml
+
+Documentation: https://yaml.dev/doc/ruamel.yaml
 
 Current build status
 ====================
@@ -365,6 +369,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@davidbrochart](https://github.com/davidbrochart/)
 * [@jakirkham](https://github.com/jakirkham/)
 * [@mbargull](https://github.com/mbargull/)
