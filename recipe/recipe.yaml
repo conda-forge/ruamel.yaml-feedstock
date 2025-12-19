@@ -14,7 +14,7 @@ source:
   sha256: 9091cd6e2d93a3a4b157ddb8fabf348c3de7f1fb1381346d985b6b247dcd8d3c
 
 build:
-  number: 1
+  number: 2
   script:
     env:
       RUAMEL_NO_LONG_DESCRIPTION: "1"
