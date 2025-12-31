@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.18.17"
+  version: "0.19.0"
   ruamel_yaml_clib_min: "0.2.15"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/r/ruamel.yaml/ruamel_yaml-${{ version }}.tar.gz
-  sha256: 9091cd6e2d93a3a4b157ddb8fabf348c3de7f1fb1381346d985b6b247dcd8d3c
+  sha256: ff19233e1eb3e9301e7a3d437847713e361a80faace167639327efbe8c0e5f95
 
 build:
-  number: 2
+  number: 0
   script:
     env:
       RUAMEL_NO_LONG_DESCRIPTION: "1"
