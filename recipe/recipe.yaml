@@ -12,6 +12,8 @@ package:
 source:
   url: https://pypi.org/packages/source/r/ruamel.yaml/ruamel_yaml-${{ version }}.tar.gz
   sha256: ff19233e1eb3e9301e7a3d437847713e361a80faace167639327efbe8c0e5f95
+  patches:
+    - 0000-no-ruamel-yaml-clibz.patch
 
 build:
   number: 0
