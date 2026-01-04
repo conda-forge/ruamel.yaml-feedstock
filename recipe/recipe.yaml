@@ -3,7 +3,6 @@ schema_version: 1
 
 context:
   version: "0.19.1"
-  ruamel_yaml_clib_min: "0.2.15"
   python_check_max: "3.14"
 
 package:
@@ -13,8 +12,6 @@ package:
 source:
   url: https://pypi.org/packages/source/r/ruamel.yaml/ruamel_yaml-${{ version }}.tar.gz
   sha256: 53eb66cd27849eff968ebf8f0bf61f46cdac2da1d1f3576dd4ccee9b25c31993
-  patches:
-    - 0000-no-ruamel-yaml-clibz.patch
 
 build:
   number: 0
@@ -33,21 +30,21 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - ruamel.yaml.clib >=${{ ruamel_yaml_clib_min }}
+    # [oldlibyaml]
+    - ruamel.yaml.clib >=0.2.15
+    # [libyaml]
+    # - ruamel.yaml.clibz>=0.3.7
+
 
 tests:
   - python:
-      imports: ruamel.yaml
+      imports:
+        - ruamel.yaml
+        - ruamel.yaml.cyaml
       pip_check: true
       python_version:
         - ${{ python_min }}.*
         - ${{ python_check_max }}.*
-  - requirements:
-      run:
-        - pip
-        - ruamel.yaml.clib ${{ ruamel_yaml_clib_min }}.*
-    script:
-      - pip check
 
 about:
   license: MIT
